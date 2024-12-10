@@ -35,7 +35,10 @@ public class Sight extends NamedModel<Long> {
 
     /**
      * Indicates whether the User has marked the Sight as a favorite
+     *
+     * @deprecated As of API 2.0.0. Please use the isFavorite method in FavoritesResources instead.
      */
+    @Deprecated(since = "2.0.0", forRemoval = true)
     private Boolean favorite;
 
     /**
@@ -121,14 +124,20 @@ public class Sight extends NamedModel<Long> {
      * Get flag indicating whether the user has marked the Sight as a favorite
      *
      * @return favorite flag
+     *
+     * @deprecated As of API 2.0.0. Please use the isFavorite method in FavoritesResources instead.
      */
+    @Deprecated(since = "2.0.0", forRemoval = true)
     public Boolean getFavorite() {
         return favorite;
     }
 
     /**
      * Set flag indicating whether the user has marked the Sight as a favorite
+     *
+     * @deprecated As of API 2.0.0. Please use the isFavorite method in FavoritesResources instead.
      */
+    @Deprecated(since = "2.0.0", forRemoval = true)
     public Sight setFavorite(Boolean favorite) {
         this.favorite = favorite;
         return this;
