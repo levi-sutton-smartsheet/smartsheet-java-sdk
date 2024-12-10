@@ -36,6 +36,8 @@ import java.util.Set;
  */
 public class FavoriteResourcesImpl extends AbstractResources implements FavoriteResources {
 
+    private static final String FAVORITES = "favorites";
+
     /**
      * Constructor.
      * <p>
@@ -67,7 +69,7 @@ public class FavoriteResourcesImpl extends AbstractResources implements Favorite
      * @throws SmartsheetException the smartsheet exception
      */
     public List<Favorite> addFavorites(List<Favorite> favorites) throws SmartsheetException {
-        return this.postAndReceiveList("favorites/", favorites, Favorite.class);
+        return this.postAndReceiveList(FAVORITES + "/", favorites, Favorite.class);
     }
 
     /**
@@ -89,7 +91,7 @@ public class FavoriteResourcesImpl extends AbstractResources implements Favorite
      * @throws SmartsheetException the smartsheet exception
      */
     public PagedResult<Favorite> listFavorites(PaginationParameters parameters) throws SmartsheetException {
-        String path = "favorites";
+        String path = FAVORITES;
 
         if (parameters != null) {
             path += parameters.toQueryString();
@@ -118,7 +120,7 @@ public class FavoriteResourcesImpl extends AbstractResources implements Favorite
      * @throws SmartsheetException the smartsheet exception
      */
     public Favorite isFavorite(FavoriteType favoriteType, Long objectId) throws SmartsheetException {
-        String path = "favorites/" + favoriteType.toString() + "/" + objectId;
+        String path = FAVORITES + "/" + favoriteType.toString() + "/" + objectId;
         return this.getResource(path, Favorite.class);
     }
 
@@ -141,7 +143,7 @@ public class FavoriteResourcesImpl extends AbstractResources implements Favorite
      * @throws SmartsheetException the smartsheet exception
      */
     public void removeFavorites(FavoriteType favoriteType, Set<Long> objectIds) throws SmartsheetException {
-        String path = "favorites/" + favoriteType.toString();
+        String path = FAVORITES + "/" + favoriteType.toString();
         Map<String, Object> parameters = new HashMap<>();
 
         if (objectIds != null) {
