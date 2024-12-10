@@ -89,9 +89,9 @@ public abstract class AbstractSheet<TRow extends AbstractRow<TColumn, TCell>, TC
     /**
      * Identifies if the sheet is marked as favorite.
      *
-     * @deprecated As of API 2.0.0. Please use the isFavorite method in FavoritesResources instead.
+     * @deprecated As of API 3.2.2. Please use the isFavorite method in FavoritesResources instead.
      */
-    @Deprecated(since = "2.0.0", forRemoval = true)
+    @Deprecated(since = "3.2.2", forRemoval = true)
     private Boolean favorite;
 
     /**
@@ -414,9 +414,9 @@ public abstract class AbstractSheet<TRow extends AbstractRow<TColumn, TCell>, TC
      *
      * @return the favorite
      *
-     * @deprecated As of API 2.0.0. Please use the isFavorite method in FavoritesResources instead.
+     * @deprecated As of API 3.2.2. Please use the isFavorite method in FavoritesResources instead.
      */
-    @Deprecated(since = "2.0.0", forRemoval = true)
+    @Deprecated(since = "3.2.2", forRemoval = true)
     public Boolean isFavorite() {
         return favorite;
     }
@@ -426,9 +426,9 @@ public abstract class AbstractSheet<TRow extends AbstractRow<TColumn, TCell>, TC
      *
      * @param favorite the favorite
      *
-     * @deprecated As of API 2.0.0. Please use the isFavorite method in FavoritesResources instead.
+     * @deprecated As of API 3.2.2. Please use the isFavorite method in FavoritesResources instead.
      */
-    @Deprecated(since = "2.0.0", forRemoval = true)
+    @Deprecated(since = "3.2.2", forRemoval = true)
     @SuppressWarnings("unchecked")
     public <T extends AbstractSheet<TRow, TColumn, TCell>> T setFavorite(Boolean favorite) {
         this.favorite = favorite;

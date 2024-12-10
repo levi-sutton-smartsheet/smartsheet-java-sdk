@@ -51,9 +51,9 @@ public class Folder extends NamedModel<Long> {
     /**
      * Returns if the user has marked the Folder as a Favorite in their Home tab.
      *
-     * @deprecated As of API 2.0.0. Please use the isFavorite method in FavoritesResources instead.
+     * @deprecated As of API 3.2.2. Please use the isFavorite method in FavoritesResources instead.
      */
-    @Deprecated(since = "2.0.0", forRemoval = true)
+    @Deprecated(since = "3.2.2", forRemoval = true)
     private Boolean favorite;
 
     /**
@@ -110,9 +110,9 @@ public class Folder extends NamedModel<Long> {
      *
      * @return the sheets
      *
-     * @deprecated As of API 2.0.0. Please use the isFavorite method in FavoritesResources instead.
+     * @deprecated As of API 3.2.2. Please use the isFavorite method in FavoritesResources instead.
      */
-    @Deprecated(since = "2.0.0", forRemoval = true)
+    @Deprecated(since = "3.2.2", forRemoval = true)
     public Boolean getFavorite() {
         return favorite;
     }
@@ -122,9 +122,9 @@ public class Folder extends NamedModel<Long> {
      *
      * @param favorite the new sheets
      *
-     * @deprecated As of API 2.0.0. Please use the isFavorite method in FavoritesResources instead.
+     * @deprecated As of API 3.2.2. Please use the isFavorite method in FavoritesResources instead.
      */
-    @Deprecated(since = "2.0.0", forRemoval = true)
+    @Deprecated(since = "3.2.2", forRemoval = true)
     public Folder setFavorite(Boolean favorite) {
         this.favorite = favorite;
         return this;
